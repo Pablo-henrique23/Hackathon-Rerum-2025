@@ -46,14 +46,14 @@ docker compose up -d
 docker cp bd/bd.sql pg:/tmp/bd.sql
 docker exec -it pg psql -U postgres -d mydb -f /tmp/bd.sql
 
-# Depois navegar até /db e rodar:
-python3 bd/populador.py
+# populador.py precisa ser executado a partir do próprio diretório em que ele está:
+cd bd && python3 populador.py
 ```
 
 ## Rodar o App
 ```bash
-# Navegar até /src e rodar:
-streamlit run src/app.py
+# app.py precisa ser executado a partir do próprio diretório em que ele está:
+cd src && streamlit run app.py
 ```
 
 ## Pastas e arquivos:
