@@ -1,0 +1,48 @@
+{
+  "tabelas": [
+    {
+      "nome": "bovinos",
+      "colunas": [
+        "codigo",
+        "nome",
+        "sexo",
+        "pais_origem",
+        "data_nascimento",
+        "raca_id",
+        "numerorgpai",
+        "numerorgmae"
+      ]
+    },
+    {
+      "nome": "fichalactacao",
+      "colunas": [
+        "id",
+        "codigo_bovino",
+        "formacoleta",
+        "idademesesparto",
+        "numeroordenhas",
+        "qtdediaslactacao",
+        "qtdeleite305",
+        "qtdegordura305",
+        "qtdeproteina305",
+        "dataencerramento",
+        "ideventoparto",
+        "ideventoseca"
+      ]
+    },
+    {
+      "nome": "ocorrenciaevento",
+      "colunas": [
+        "id",
+        "idbovino",
+        "codigo_bovino",
+        "dataocorrencia",
+        "facilidade_parto",
+        "nro_crias",
+        "qtde_litros",
+        "sexo_crias",
+        "tipo_evento"
+      ]
+    }
+  ]
+}

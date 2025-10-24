@@ -1,0 +1,196 @@
+{
+  "tabelas": [
+    {
+      "nome": "bovinos",
+      "descricao": "Tabela que armazena informações dos bovinos cadastrados",
+      "colunas": [
+        {
+          "nome": "codigo",
+          "tipo": "text",
+          "descricao": "Código único do bovino (ex: FFSC00072)",
+          "nullable": false
+        },
+        {
+          "nome": "nome",
+          "tipo": "text",
+          "descricao": "Nome do bovino (ex: Touro00072)",
+          "nullable": false
+        },
+        {
+          "nome": "sexo",
+          "tipo": "character(1)",
+          "descricao": "Sexo do bovino: M = macho, F = fêmea",
+          "nullable": true
+        },
+        {
+          "nome": "pais_origem",
+          "tipo": "text",
+          "descricao": "País de origem do bovino",
+          "nullable": true
+        },
+        {
+          "nome": "data_nascimento",
+          "tipo": "date",
+          "descricao": "Data de nascimento do bovino",
+          "nullable": true
+        },
+        {
+          "nome": "raca_id",
+          "tipo": "text",
+          "descricao": "Identificador da raça do bovino: Raça 01",
+          "nullable": true
+        },
+        {
+          "nome": "numerorgpai",
+          "tipo": "text",
+          "descricao": "Código do pai do bovino",
+          "nullable": true
+        },
+        {
+          "nome": "numerorgmae",
+          "tipo": "text",
+          "descricao": "Código da mãe do bovino",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "nome": "fichalactacao",
+      "descricao": "Registra informações de lactação de cada bovino, incluindo quantidade de leite, gordura e proteína.",
+      "colunas": [
+        {
+          "nome": "id",
+          "tipo": "integer",
+          "descricao": "Identificador único da lactação (chave primária).",
+          "nullable": false
+        },
+        {
+          "nome": "codigo_bovino",
+          "tipo": "text",
+          "descricao": "Código do bovino relacionado a esta lactação.",
+          "nullable": false
+        },
+        {
+          "nome": "formacoleta",
+          "tipo": "text",
+          "descricao": "Forma de coleta do leite.",
+          "nullable": true
+        },
+        {
+          "nome": "idademesesparto",
+          "tipo": "integer",
+          "descricao": "Idade do bovino em meses no parto.",
+          "nullable": true
+        },
+        {
+          "nome": "numeroordenhas",
+          "tipo": "integer",
+          "descricao": "Número de ordenhas realizadas durante a lactação.",
+          "nullable": true
+        },
+        {
+          "nome": "qtdediaslactacao",
+          "tipo": "integer",
+          "descricao": "Quantidade de dias da lactação.",
+          "nullable": true
+        },
+        {
+          "nome": "qtdeleite305",
+          "tipo": "numeric(18,10)",
+          "descricao": "Quantidade total de leite em 305 dias de lactação.",
+          "nullable": true
+        },
+        {
+          "nome": "qtdegordura305",
+          "tipo": "numeric(18,10)",
+          "descricao": "Quantidade de gordura do leite em 305 dias.",
+          "nullable": true
+        },
+        {
+          "nome": "qtdeproteina305",
+          "tipo": "numeric(18,10)",
+          "descricao": "Quantidade de proteína do leite em 305 dias.",
+          "nullable": true
+        },
+        {
+          "nome": "dataencerramento",
+          "tipo": "date",
+          "descricao": "Data de encerramento da lactação.",
+          "nullable": true
+        },
+        {
+          "nome": "ideventoparto",
+          "tipo": "integer",
+          "descricao": "Identificador do evento de parto associado.",
+          "nullable": true
+        },
+        {
+          "nome": "ideventoseca",
+          "tipo": "integer",
+          "descricao": "Identificador do evento de seca associado.",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "nome": "ocorrenciaevento",
+      "descricao": "Registra ocorrências de eventos relacionados aos bovinos, como parto, seca ou produção de leite.",
+      "colunas": [
+        {
+          "nome": "id",
+          "tipo": "integer",
+          "descricao": "Identificador único do evento (chave primária).",
+          "nullable": false
+        },
+        {
+          "nome": "idbovino",
+          "tipo": "integer",
+          "descricao": "Identificador interno do bovino (opcional).",
+          "nullable": true
+        },
+        {
+          "nome": "codigo_bovino",
+          "tipo": "text",
+          "descricao": "Código do bovino relacionado a este evento.",
+          "nullable": false
+        },
+        {
+          "nome": "dataocorrencia",
+          "tipo": "date",
+          "descricao": "Data em que o evento ocorreu.",
+          "nullable": true
+        },
+        {
+          "nome": "facilidade_parto",
+          "tipo": "text",
+          "descricao": "Descrição da facilidade ou dificuldade do parto, se aplicável.",
+          "nullable": true
+        },
+        {
+          "nome": "nro_crias",
+          "tipo": "integer",
+          "descricao": "Número de crias no parto.",
+          "nullable": true
+        },
+        {
+          "nome": "qtde_litros",
+          "tipo": "numeric(18,10)",
+          "descricao": "Quantidade de litros produzidos, se aplicável.",
+          "nullable": true
+        },
+        {
+          "nome": "sexo_crias",
+          "tipo": "character(1)",
+          "descricao": "Sexo das crias: M = macho, F = fêmea.",
+          "nullable": true
+        },
+        {
+          "nome": "tipo_evento",
+          "tipo": "integer",
+          "descricao": "Tipo de evento (ex: parto, seca, outro).",
+          "nullable": true
+        }
+      ]
+    }
+  ]
+}
