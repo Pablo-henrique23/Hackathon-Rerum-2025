@@ -3,7 +3,7 @@ import requests, re, json, os
 
 def _call_openai(messages, temperature=0.0, max_tokens=800):
     base = "https://api.openai.com/v1"
-    # "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"
+    # key -->"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"
     api_key = os.getenv("OPENAI_API_KEY")
     model = "gpt-4o-mini"
 
